@@ -57,10 +57,10 @@ body {
 
   display: flex;
 
-  /* flex-direction: column; */
+  flex-direction: column;
 
   /* justify-content is for aligning the element on the main axis  (horizontal by default) */
-  /* justify-content: space-evenly; */
+  justify-content: center;
 
   /* try */
   /* flex-start, flex-end, center,space-between,space-around, space-evenly */
@@ -68,7 +68,7 @@ body {
   /* align-items is for aligning the element on the cross axis (vertical when main axis is horizontal) */
   /* try */
   /* flex-start, flex-end, center,baseline */
-  align-items: flex-start;
+  align-items: center;
 
   /* by default, flex item will always try to fit in one line  */
   /* when there are more and more, the items will start crushing each other  */
@@ -80,17 +80,22 @@ body {
   /* Properties value is more or less the same as justify-content */
   /* align-content: center; */
 
-  /* gap: 1rem; */
+  gap: 0.5rem;
 
-  /* overflow-y: scroll; */
+  overflow-x: scroll;
 }
 
 .item-1 {
   font-size: 1.5rem;
+  /* flex-grow: 1; */
+
+  order: -1;
 }
 
 .item-2 {
   font-size: 1.5rem;
+  flex-grow: 2;
+  order: 0;
 }
 
 /* Learning Point 2 */
@@ -100,12 +105,13 @@ body {
 .item-3 {
   font-size: 1.5rem;
   /* flex-grow: 1; */
-  /* flex-shrink: 5; */
-  /* flex-basis: 300px; */
+  /* flex-shrink: 2; */
+  /* flex-basis: 200px; */
   /* flex combines all 3 but the last 2 are optional and will adjust responsively by default */
   /* flex: 1; */
   /* try */
   /* flex-start, flex-end, center,baseline */
   /* align-self: baseline; */
   /* order: -1; */
+  order: 1;
 }
